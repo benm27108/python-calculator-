@@ -1,22 +1,16 @@
-operator = input("enter an operator(+ - * /)")
-num1 = float(input("enter the 1st number"))
-num2 = float(input("enter the 2nd number"))
+#PYTHON WEIGHT CALCULATOR
 
-if operator == "+":
-    results = num1 + num2
-    print(results)
-elif operator == "-":
-    results = num1 - num2
-    print(results)
-elif operator == "*":
-    results = num1 * num2
-    print (results)
-elif operator == "/" :
-    results = num1/num2
-    print(results)
+weight = float(input("Enter your weight"))
+unit = input("Kilogram or Pounds (Kgs, Lbs): ")
 
+if unit == "Kgs":
+    weight = weight * 2.205
+    unit = "Lbs"
+    print(f"Your weight is {weight},{unit}")
+elif unit == "Lbs":
+    weight = weight / 2.205
+    unit = "Kgs"
+    print(f"Your weight is {weight},{unit}")
 else:
-    print(f"{operator} is not valid operator")
-
-
+    print(f"{unit} is not valid")
 
